@@ -15,7 +15,7 @@ import java.util.ArrayList;
 @RequestMapping("cheese")
 public class CheeseController {
 
-    //create an arraylist that holds strings (names of the cheeses)
+    //create an Arraylist that holds strings (names of the cheeses)
     //static is necessary to make list accessible to the below methods
     //note that adding an arraylist is not a replacement for a database.  Whenever we restart, our data will vanish
     static ArrayList<String> cheeses = new ArrayList<>();
