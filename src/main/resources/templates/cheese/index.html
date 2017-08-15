@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<!--this pulls in info about the tags we are about to use that is about thymeleaf-->
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${title}">Title</title>
+</head>
+<body>
+<!--th:text is a thymeleaf attribute using thymeleaf syntax-->
+<!--will pull out what is passed from the controller-->
+<h1 th:text="${title}">Default Title</h1>
+
+<!--if no cheeses are listed and its size is not zero then display message-->
+<p th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</p>
+
+<a href="/cheese/add">Add Cheese</a>
+
+<!--display unordered list of all the cheeses-->
+<!--loop over all the cheeses.  Add loop syntax to the HTML element we want to repeat (th:each)-->
+<ul>
+    <!-- ${} tells thymeleaf to look in the model for this value named cheeses (list) and will iterate over the list-->
+    <!--Whenever we're using the th:each attribute, we're basically telling thymeleaf to repeat the-->
+    <!--current element (li tag) for each item in the list-->
+    <li th:each="cheese : ${cheeses}" th:text="${cheese}"></li>
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- ${} tells thymeleaf to look in the model for this value named cheeses (list) and will iterate over the list-->
+<!--Whenever we're using the th:each attribute, we're basically telling thymeleaf to repeat the-->
+<!--current element (li tag) for each item in the list-->
+<!--must always have xmlns to conform with thymeleaf requirements-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${title}">Title</title>
+</head>
+<body>
+<h1 th:text="${title}">Default Title</h1>
+
+<!-- ${} tells thymeleaf to look in the model for this value named cheeses (list) and will iterate over the list-->
+<!--Whenever we're using the th:each attribute, we're basically telling thymeleaf to repeat the-->
+<!--current element (li tag) for each item in the list-->
+<!--the form with have the method post - we're posting data-->
+<form method="post">
+    <!-- ${} tells thymeleaf to look in the model for this value named cheeses (list) and will iterate over the list-->
+    <!--Whenever we're using the th:each attribute, we're basically telling thymeleaf to repeat the-->
+    <!--current element (li tag) for each item in the list-->
+    <!--first input element will be named cheeseName with input type text-->
+    <input type="text" name="cheeseName" />
+    <!-- ${} tells thymeleaf to look in the model for this value named cheeses (list) and will iterate over the list-->
+    <!--Whenever we're using the th:each attribute, we're basically telling thymeleaf to repeat the-->
+    <!--current element (li tag) for each item in the list-->
+    <!--second input element will be a submit button titled Add Cheese-->
+    <input type="submit" value="Add Cheese" />
+</form>
+
+</body>
+</html>
